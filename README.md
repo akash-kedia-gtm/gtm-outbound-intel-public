@@ -1,103 +1,84 @@
-# GTM Outbound Intelligence — Public Overview
+# GTM Outbound Intelligence
 
-This is a public overview of a private GTM engineering project.
+A sanitized public overview of a GTM engineering system for designing clearer, more evidence-based outbound campaigns.
 
-The project explores how AI can help a GTM operator make better outbound decisions before spending time, credits, or effort on research and outreach.
+## The problem
 
-The simple goal is:
+Outbound research can become expensive and disconnected from the business question. A campaign idea may lead directly to spreadsheets, enrichment tools, AI columns, and manual research without first defining what decision the evidence is meant to support.
 
-> Turn a business question into a clear evidence plan.
+This system introduces a planning and audit layer before execution.
 
-Instead of jumping straight into research tools or enrichment platforms, the system first asks:
-
-- What are we trying to find out?
-- What evidence would help us decide?
-- What information do we already have?
-- What is the safest or lowest-cost way to collect the missing evidence?
-- Is there enough evidence to continue, stop, or investigate further?
-
-This repository is intentionally simple. It does not include private code, client data, source files, enrichment catalogues, screenshots, row counts, internal prompts, API keys, or implementation-sensitive details.
-
-It is only a sanitized portfolio summary of the project idea and workflow.
-
-## What this project is about
-
-Outbound research can become messy quickly.
-
-A GTM team may have a campaign idea, a list of companies, several research tools, and many possible signals. Without a clear system, it is easy to spend time or money before knowing what question is being answered.
-
-This project adds structure before execution.
-
-It separates the workflow into a simple chain:
+## Core workflow
 
 ```text
 Business question
-→ evidence needed
-→ research plan
-→ evidence collected
-→ decision
+      ↓
+Campaign hypotheses
+      ↓
+Holistic campaign brief
+      ↓
+Evidence requirements
+      ↓
+Research and enrichment plan
+      ↓
+Evidence and assessment
+      ↓
+Decision and audit trail
 ```
 
-The system is not meant to replace a GTM operator. It is meant to help the operator think clearly, avoid unnecessary work, and keep a decision trail.
+The system helps a GTM operator decide:
 
-## Example use case
+- what the campaign is trying to learn;
+- what evidence would support the decision;
+- what information is already known;
+- which research route is appropriate;
+- what the route will cost;
+- whether to continue, stop, or investigate further.
 
-A GTM operator wants to know whether a company is a good fit for a campaign.
+## Architecture
 
-Instead of immediately running paid research, the system first defines:
+The reusable architecture separates:
 
-1. The campaign idea
-2. The target company condition
-3. The evidence required
-4. The possible research methods
-5. The decision rule
+- **Client and campaign context** — the offer, target conditions, and business objective;
+- **Company Intelligence** — company-level evidence and decision logic;
+- **Execution planning** — provider selection, cost, inputs, conditions, and QA;
+- **Assurance** — the distinction between facts, interpretation, uncertainty, and action.
 
-Only after that does it plan what information should be collected.
+The Company Intelligence workflow follows twelve controlled steps. A campaign is planned completely before a company is researched or a paid enrichment is approved.
 
-This helps reduce wasted research, duplicate work, and unclear decisions.
+## What this public repository contains
 
-## What is included here
+- [Overview of the System](./Overview%20of%20the%20System.md)
+- A concise explanation of the decision workflow
+- A sanitized description of the system boundaries and operating principles
 
-This public repository includes:
+## What it intentionally does not contain
 
-- A simple explanation of the project
-- A sanitized case study
-- A high-level workflow
-
-## What is not included
-
-This repository does not include:
-
-- Client names
-- Private datasets
-- Screenshots
-- Row counts
-- Enrichment catalogues
-- Paid source details
+- Client names or private strategy
+- Private datasets or spreadsheets
+- API keys or credentials
 - Internal prompts
-- API keys
-- Production code
-- Confidential strategy
+- Production enrichment code
+- Paid-provider details
+- Confidential campaign outputs
 
-The full working project remains private.
+The full working implementation remains private.
 
-## Why this matters
+## Why this matters for GTM engineering
 
-Modern GTM work is becoming more technical.
+Modern GTM work combines:
 
-A GTM engineer needs to combine business reasoning, data, AI, and operational judgment.
+- business and campaign reasoning;
+- structured data;
+- AI-assisted planning;
+- cost and execution controls;
+- evidence-based judgment;
+- reproducible operational history.
 
-This project is an example of that approach:
-
-```text
-Think clearly
-→ collect only useful evidence
-→ control cost
-→ keep a decision trail
-```
+This project explores how those pieces can work together without allowing tools or automation to replace the underlying business decision.
 
 ## Status
 
-This is a sanitized portfolio overview.
+This is a public architecture and portfolio overview. It is not presented as a production-ready open-source application.
 
-The full project is private and was built as a learning and systems-design exercise around Git, GitHub, AI-assisted development, and GTM workflow architecture.
+The private implementation is being developed and tested separately, with client data kept outside the public repository.
