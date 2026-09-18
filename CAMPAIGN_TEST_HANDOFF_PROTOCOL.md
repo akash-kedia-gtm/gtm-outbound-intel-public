@@ -1,4 +1,4 @@
-# Campaign-to-test handoff protocol
+# Overview of the System
 
 This is the repeatable operator sequence for Company Intelligence v1. It
 applies to every client campaign, including a campaign the user selects
